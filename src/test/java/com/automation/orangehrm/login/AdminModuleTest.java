@@ -95,6 +95,7 @@ public class AdminModuleTest extends BaseClass {
 		click(design.clickbutt);
 		enterText(design.userName,firstEmpName);
 		click(design.searchButt);
+		System.out.println("close the programe");
 
 
 		}
