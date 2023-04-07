@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-06T14:49:12 IST" name="Default suite" finished-at="2023-04-06T14:50:55 IST" duration-ms="103354">
+  <suite started-at="2023-04-07T13:17:07 IST" name="Default suite" finished-at="2023-04-07T13:17:08 IST" duration-ms="53">
     <groups>
     </groups>
-    <test started-at="2023-04-06T14:49:12 IST" name="Default test" finished-at="2023-04-06T14:50:55 IST" duration-ms="103354">
-      <class name="com.automation.orangehrm.login.Nationality">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.automation.orangehrm.login.Nationality@399f45b1]" started-at="2023-04-06T14:49:12 IST" name="startBrowser" finished-at="2023-04-06T14:50:14 IST" duration-ms="62739" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="verifyNationality()[pri:0, instance:com.automation.orangehrm.login.Nationality@399f45b1]" started-at="2023-04-06T14:50:14 IST" name="verifyNationality" finished-at="2023-04-06T14:50:55 IST" duration-ms="40569" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+    <test started-at="2023-04-07T13:17:07 IST" name="Default test" finished-at="2023-04-07T13:17:08 IST" duration-ms="53">
+      <class name="com.automation.orangehrm.login.AdminModuleTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.automation.orangehrm.login.AdminModuleTest@399f45b1]" started-at="2023-04-07T13:17:07 IST" name="start" finished-at="2023-04-07T13:17:07 IST" duration-ms="9" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class='oxd-table-body']/div/div/div[2]/div (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class='oxd-table-body']/div/div/div[2]/div (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.autamation.utility.BaseClass.allElement(BaseClass.java:107)
-at com.automation.orangehrm.login.Nationality.verifyNationality(Nationality.java:36)
+              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)
+at com.autamation.utility.PropertiesHandling.<init>(PropertiesHandling.java:18)
+at com.automation.orangehrm.login.AdminModuleTest.start(AdminModuleTest.java:25)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -48,40 +40,66 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=111.0.5563.148)
-Build info: version: '4.8.0', revision: '267030adea'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c1c23cab610800b817500eb285a6a880, findElements {using=xpath, value=//div[@class='oxd-table-body']/div/div/div[2]/div}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\shubham\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50782}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50782/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c1c23cab610800b817500eb285a6a880
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
-at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:102)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:321)
-at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:318)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 28 more
+Caused by: java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.autamation.utility.PropertiesHandling.<init>(PropertiesHandling.java:13)
+... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNationality -->
-      </class> <!-- com.automation.orangehrm.login.Nationality -->
+        </test-method> <!-- start -->
+        <test-method signature="verifyModule()[pri:0, instance:com.automation.orangehrm.login.AdminModuleTest@399f45b1]" started-at="2023-04-07T13:17:08 IST" name="verifyModule" finished-at="2023-04-07T13:17:08 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)
+at com.autamation.utility.PropertiesHandling.<init>(PropertiesHandling.java:18)
+at com.automation.orangehrm.login.AdminModuleTest.start(AdminModuleTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.FileNotFoundException: C:\automationmaven\target\config.properties (The system cannot find the file specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+at com.autamation.utility.PropertiesHandling.<init>(PropertiesHandling.java:13)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModule -->
+      </class> <!-- com.automation.orangehrm.login.AdminModuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
