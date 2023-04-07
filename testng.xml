@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.automation.orangehrm.login.AdminModuleTest"/>
+      <class name="com.automation.orangehrm.login.NewLogin"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
